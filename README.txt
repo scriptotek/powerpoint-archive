@@ -12,6 +12,6 @@ WHAT THE DIFFERENT SCRIPTS DO
 
 The javascript file script.js creates individual ppt-files of each slide in the powerpoint-files in the array filearray. It also takes a png-screenshot of each slide. These are moved to the folder TEMP.
 
-The python script script.py reads the TEMP-folder and moved unique presentations (i.e. slides) over to the ARCHIVE-folder. Uniqueness is only determined by the file size.
-
+The python script script.py reads the TEMP-folder and moves unique presentations (i.e. slides) over to the ARCHIVE-folder. Uniqueness is only determined by the file size
+fa.
 The bat-script runs the javascript first and then the python script.
