@@ -34,8 +34,7 @@ function exportSingleSlides(filepath){
 		slide.Copy();
 		tmpPresentation.Slides.Paste(1);
 
-		// Set the layout. Kommentér vekk denne hvis nyeste versjon av
-		// powerpoint, for der funker den ikke
+		// Set the layout. The line below won't work in the newest version of powerpoint for some reason.
 		// tmpPresentation.Slides(1).CustomLayout = layout;
 		
 		// Save and close
