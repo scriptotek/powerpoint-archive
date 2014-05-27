@@ -51,10 +51,10 @@ function exportSingleSlides(filepath){
 }
 
 // The path to the script hardcoded (can't see why it would hurt here)
-scriptpath = "C:\\Users\\Stian\\Dropbox\\jobb\\RB\\powerpoint\\";
+scriptpath = "C:\\Users\\Stian\\powerpoint\\";
 
 // Array with all powerpoint files we need
-filearray = ['C:\\Users\\Stian\\Dropbox\\jobb\\RB\\powerpoint\\test.pptx','C:\\Users\\Stian\\Dropbox\\jobb\\RB\\powerpoint\\test2.pptx'];
+filearray = ['C:\\Users\\Stian\\powerpoint\\test.pptx','C:\\Users\\Stian\\powerpoint\\test2.pptx'];
 
 // Now we can loop over the powerpoint-files
 for (i = 0; i < filearray.length; i++) {
