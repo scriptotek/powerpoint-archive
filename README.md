@@ -2,8 +2,10 @@ These are some small scripts that look through powerpoint files and exports each
 
 ### Usage
 
-Run `run.bat` in a folder that has the folders TEMP and ARCHIVE within it.
-Python must be installed, and you should edit `run.bat` to add the presentations to be archived and set paths.
+* Make sure Python is installed.
+* Edit `run.bat` to configure which presentations to archive (no config file yet).
+  Also make sure the path at the top of the file points to the folder the script runs from.
+* Use Task Scheduler to make `run.bat` run every night. Make sure to test that it actually runs OK.
 
 ### Description
 

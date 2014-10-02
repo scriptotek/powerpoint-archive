@@ -8,13 +8,11 @@
  * PP reference: http://msdn.microsoft.com/en-us/library/ff743835(v=office.15).aspx
  */
  
-// The path to the script hardcoded (can't see why it would hurt here)
-
 function exportSingleSlides(outfolder, infile){
 	
 	var fso = new ActiveXObject('Scripting.FileSystemObject');
 	var fsoForAppend = 8;
-	var logfile = fso.OpenTextFile('log.txt', fsoForAppend);
+	var logfile = fso.CreateTextFile('log.txt', fsoForAppend);
 	var app = new ActiveXObject('PowerPoint.Application');
 	app.Visible = true;
 	
@@ -39,7 +37,7 @@ function exportSingleSlides(outfolder, infile){
 		var unix = Math.round(+new Date()/1000);
 
 		// Export slide to png
-		slide.Export(outfolder  + 'slide' + unix + '.png', 'PNG', 1920, 1080);
+		slide.Export(outfolder + 'slide' + unix + '.png', 'PNG', 1920, 1080);
 
 		// Open new presentation
 		tmpPresentation = app.Presentations.Add();
@@ -77,4 +75,6 @@ function exportSingleSlides(outfolder, infile){
 	app.Quit();
 }
 
-exportSingleSlides('TEMP\\', WScript.arguments(0));
+
+var selfdir = WScript.ScriptFullName.replace(WScript.ScriptName, '');
+exportSingleSlides(selfdir + 'TEMP\\', WScript.arguments(0));
