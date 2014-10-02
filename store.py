@@ -61,6 +61,5 @@ logfile.write('%s : Found %d new slide(s)\n' % (today, newfiles))
 
 for root, dirs, files in os.walk(path_to_temp):
     for f in files:
-    	os.unlink(os.path.join(root, f));
-    for d in dirs:
-    	shutil.rmtree(os.path.join(root, d));
+		if f != '.gitkeep':
+			os.unlink(os.path.join(root, f));
