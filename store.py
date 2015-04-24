@@ -16,7 +16,7 @@ from datetime import datetime
 today = datetime.now().strftime('%Y-%m-%d')
 
 # Set path to script folder
-path_to_script = 'C:\\Users\\storskjerm\\Desktop\\powerpoint\\';
+path_to_script = 'C:\\somefolder\\';
 path_to_archive = path_to_script + 'ARCHIVE';
 path_to_temp = path_to_script + 'TEMP';
 
@@ -25,7 +25,7 @@ path_to_temp = path_to_script + 'TEMP';
 filesizes = [];
 files_in_archive = os.listdir(path_to_archive);
 
-print 'Gathering filesize in archive dir...'
+print ("Gathering filesize in archive dir...")
 for file_in_dir in files_in_archive:
 	if file_in_dir.endswith('.png'):
 		filesizes.extend([os.path.getsize(path_to_archive + '\\' + file_in_dir)]);
@@ -34,7 +34,7 @@ for file_in_dir in files_in_archive:
 
 files_in_temp = os.listdir(path_to_temp);
 
-print 'Gathering filesize in temp dir...'
+print ("Gathering filesize in temp dir...")
 newfiles = 0
 for file_no, file_in_dir in enumerate(files_in_temp):
 	if file_in_dir.endswith('.png'):
@@ -51,7 +51,7 @@ for file_no, file_in_dir in enumerate(files_in_temp):
 			filesizes.extend([current_file_size]);
 
 
-print '%s : Found %d new slide(s)' % (today, newfiles)
+print ("%s : Found %d new slide(s)" % (today, newfiles))
 logfile = open('log.txt', 'a')
 logfile.write('%s : Found %d new slide(s)\n' % (today, newfiles))
 
@@ -60,6 +60,6 @@ logfile.write('%s : Found %d new slide(s)\n' % (today, newfiles))
 # Delete contents of TEMP
 
 for root, dirs, files in os.walk(path_to_temp):
-    for f in files:
+	for f in files:
 		if f != '.gitkeep':
 			os.unlink(os.path.join(root, f));
