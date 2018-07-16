@@ -2,7 +2,7 @@ These are some small scripts that look through powerpoint files and exports each
 
 ### Usage
 
-* Make sure Python is installed.
+* Make sure Python (and Powerpoint) is installed.
 * Edit `run.bat` to configure which presentations to archive (no config file yet).
   Also make sure the path at the top of the file points to the folder the script runs from.
 * Use Task Scheduler to make `run.bat` run every night. Make sure to test that it actually runs OK.
